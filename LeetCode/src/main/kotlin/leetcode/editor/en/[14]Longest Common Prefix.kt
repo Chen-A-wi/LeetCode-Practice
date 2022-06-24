@@ -38,9 +38,9 @@ class LongestCommonPrefixSolution {
         } else {
             var answer = strs.first()
 
-            for (i in strs.indices) {
+            for (i in 1 until strs.size) {
                 while (strs[i].indexOf(answer) != 0) {
-                    answer = answer.substring(0, answer.length - 1)
+                    answer = answer.substring(0, answer.lastIndex)
                     if (answer.isEmpty()) {
                         return ""
                     }
